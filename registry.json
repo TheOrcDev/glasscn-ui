@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "glasscn",
+  "homepage": "https://glasscn.dev",
+  "items": [
+    {
+      "name": "glass-button",
+      "type": "registry:component",
+      "title": "Glass Button",
+      "description": "A simple glass button component",
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "components/ui/glass/button.tsx",
+          "type": "registry:component",
+          "target": "components/ui/glass/button.tsx"
+        }
+      ]
+    }
+  ]
+}

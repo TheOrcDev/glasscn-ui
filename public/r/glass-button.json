@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-button",
+  "type": "registry:component",
+  "title": "Glass Button",
+  "description": "A simple glass button component",
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "components/ui/glass/button.tsx",
+      "content": "import { type VariantProps, cva } from \"class-variance-authority\";\n\nimport { cn } from \"@/lib/utils\";\n\nimport { Button as ShadcnButton } from \"@/components/ui/button\";\n\nexport const buttonVariants = cva(\"\", {\n  variants: {\n    variant: {\n      default: \"bg-foreground\",\n      destructive: \"bg-foreground\",\n      outline: \"bg-foreground\",\n      secondary: \"bg-secondary text-secondary-foreground hover:bg-secondary/80\",\n      ghost: \"hover:bg-accent hover:text-accent-foreground\",\n      link: \"text-primary underline-offset-4 hover:underline\",\n    },\n    size: {\n      default: \"h-9 px-4 py-2 has-[>svg]:px-3\",\n      sm: \"h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5\",\n      lg: \"h-10 rounded-md px-6 has-[>svg]:px-4\",\n      icon: \"size-9\",\n    },\n  },\n  defaultVariants: {\n    variant: \"default\",\n    size: \"default\",\n  },\n});\n\nexport interface BitButtonProps\n  extends React.ButtonHTMLAttributes<HTMLButtonElement>,\n    VariantProps<typeof buttonVariants> {\n  asChild?: boolean;\n  ref?: React.Ref<HTMLButtonElement>;\n}\n\nfunction Button({ children, ...props }: BitButtonProps) {\n  const { variant, size, className } = props;\n\n  return (\n    <ShadcnButton\n      {...props}\n      className={cn(\n        \"bg-primary/20 hover:bg-primary/30 dark:bg-primary/20 dark:hover:bg-primary/30 text-primary dark:text-primary backdrop-blur-[1px] border border-primary/20\",\n        className\n      )}\n      size={size}\n      variant={variant}\n    >\n      {children}\n    </ShadcnButton>\n  );\n}\n\nexport { Button };\n",
+      "type": "registry:component",
+      "target": "components/ui/glass/button.tsx"
+    }
+  ]
+}
