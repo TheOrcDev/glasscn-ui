@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 
+import { cn } from "@/lib/utils";
+
 import { Button } from "@/components/ui/glass/button";
 import { Separator } from "@/components/ui/separator";
 
@@ -28,7 +30,14 @@ export default function ButtonPage() {
         Displays an glass button component.
       </p>
 
-      <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px]">
+      <div className="relative flex flex-col gap-4 border rounded-lg p-4 min-h-[450px]">
+        <div
+          className={cn(
+            "pointer-events-none absolute inset-0 [background-size:40px_40px] select-none -z-10",
+            "[background-image:linear-gradient(to_right,#e5e5e5_1px,transparent_1px),linear-gradient(to_bottom,#e5e5e5_1px,transparent_1px)] dark:[background-image:linear-gradient(to_right,#171717_1px,transparent_1px),linear-gradient(to_bottom,#171717_1px,transparent_1px)]"
+          )}
+        />
+
         <div className="flex items-center justify-between">
           <h2 className="text-sm text-muted-foreground sm:pl-3">
             Glass button component
