@@ -13,21 +13,13 @@ export const navItems = {
     },
     {
       label: "Components",
-      href: "/docs/components/accordion",
-    },
-    {
-      label: "Blocks",
-      href: "/blocks/authentication",
-    },
-    {
-      label: "Themes",
-      href: "/themes",
+      href: "/docs/components/button",
     },
   ],
   navMain: [
     {
       title: "Components",
-      url: "/components/accordion",
+      url: "/docs/components/button",
       items: components.sort((a, b) => a.title.localeCompare(b.title)),
     },
   ],
