@@ -27,7 +27,7 @@ export default function ButtonPage() {
       </div>
 
       <p className="text-muted-foreground">
-        Displays an glass button component.
+        Displays a glass button component.
       </p>
 
       <div className="relative flex flex-col gap-4 border rounded-lg p-4 min-h-[450px]">

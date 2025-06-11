@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 
 import { cn } from "@/lib/utils";
 
@@ -7,6 +8,7 @@ import {
   AlertDescription,
   AlertTitle,
 } from "@/components/ui/glass/alert";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 
 import CodeSnippet from "../code-snippet";
@@ -30,9 +32,7 @@ export default function AlertPage() {
         />
       </div>
 
-      <p className="text-muted-foreground">
-        Displays an glass alert component.
-      </p>
+      <p className="text-muted-foreground">Displays a glass alert component.</p>
 
       <div className="relative flex flex-col gap-4 border rounded-lg p-4 min-h-[450px]">
         <div
@@ -51,14 +51,45 @@ export default function AlertPage() {
             <OpenInV0Button name="glass-alert" className="w-fit" />
           </div>
         </div>
-        <div className="flex items-center justify-center min-h-[400px] relative">
-          <Alert className="w-fit">
+        <div className="relative h-[400px]">
+          <ScrollArea className="h-full w-full">
+            <div className="flex flex-col gap-4 p-4">
+              <div className="h-[400px]" />
+              <Image
+                src="/images/fractalize.png"
+                alt="Alert"
+                width={1000}
+                height={1000}
+                className="rounded-lg"
+              />
+              <Image
+                src="/images/background.jpg"
+                alt="Alert"
+                width={1000}
+                height={1000}
+                className="rounded-lg"
+              />
+              <Image
+                src="/images/silva.jpg"
+                alt="Alert"
+                width={1000}
+                height={1000}
+                className="rounded-lg"
+              />
+            </div>
+          </ScrollArea>
+
+          <Alert className="w-fit absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <AlertTitle>Heads up!</AlertTitle>
             <AlertDescription>
               You can add glass components to your app using the cli.
             </AlertDescription>
           </Alert>
         </div>
+
+        <p className="hidden md:block text-sm text-muted-foreground">
+          Scroll down to see the alert on different backgrounds.{" "}
+        </p>
       </div>
 
       <h3 className="text-lg font-bold">Installation</h3>
