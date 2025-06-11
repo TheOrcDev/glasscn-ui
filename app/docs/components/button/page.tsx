@@ -1,11 +1,11 @@
 import { Metadata } from "next";
-import Image from "next/image";
 
 import { cn } from "@/lib/utils";
 
 import { Button } from "@/components/ui/glass/button";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
+
+import ImageShowcaseScroll from "@/components/image-showcase-scroll";
 
 import CodeSnippet from "../code-snippet";
 import CopyCommandButton from "../copy-command-button";
@@ -50,32 +50,7 @@ export default function ButtonPage() {
           </div>
         </div>
         <div className="relative h-[400px]">
-          <ScrollArea className="h-full w-full">
-            <div className="flex flex-col gap-4 p-4">
-              <div className="h-[400px]" />
-              <Image
-                src="/images/fractalize.png"
-                alt="Alert"
-                width={1000}
-                height={1000}
-                className="rounded-lg"
-              />
-              <Image
-                src="/images/background.jpg"
-                alt="Alert"
-                width={1000}
-                height={1000}
-                className="rounded-lg"
-              />
-              <Image
-                src="/images/silva.jpg"
-                alt="Alert"
-                width={1000}
-                height={1000}
-                className="rounded-lg"
-              />
-            </div>
-          </ScrollArea>
+          <ImageShowcaseScroll />
 
           <Button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             Button

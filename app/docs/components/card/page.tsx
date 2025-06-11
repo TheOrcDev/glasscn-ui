@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Image from "next/image";
 
 import { cn } from "@/lib/utils";
 
@@ -14,7 +13,6 @@ import {
 } from "@/components/ui/glass/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import {
   Select,
   SelectContent,
@@ -23,6 +21,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
+
+import ImageShowcaseScroll from "@/components/image-showcase-scroll";
 
 import CodeSnippet from "../code-snippet";
 import CopyCommandButton from "../copy-command-button";
@@ -65,32 +65,7 @@ export default function CardPage() {
           </div>
         </div>
         <div className="relative h-[400px]">
-          <ScrollArea className="h-full w-full">
-            <div className="flex flex-col gap-4 p-4">
-              <div className="h-[400px]" />
-              <Image
-                src="/images/fractalize.png"
-                alt="Alert"
-                width={1000}
-                height={1000}
-                className="rounded-lg"
-              />
-              <Image
-                src="/images/background.jpg"
-                alt="Alert"
-                width={1000}
-                height={1000}
-                className="rounded-lg"
-              />
-              <Image
-                src="/images/silva.jpg"
-                alt="Alert"
-                width={1000}
-                height={1000}
-                className="rounded-lg"
-              />
-            </div>
-          </ScrollArea>
+          <ImageShowcaseScroll />
 
           <Card className="max-w-lg min-w-96 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <CardHeader>
