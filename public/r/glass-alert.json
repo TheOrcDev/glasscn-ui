@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-alert",
+  "type": "registry:component",
+  "title": "Glass Alert",
+  "description": "A simple glass alert component",
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "components/ui/glass/alert.tsx",
+      "content": "import * as React from \"react\";\n\nimport { type VariantProps, cva } from \"class-variance-authority\";\n\nimport { cn } from \"@/lib/utils\";\n\nconst alertVariants = cva(\n  \"relative w-full rounded-lg border px-4 py-3 text-sm grid has-[>svg]:grid-cols-[calc(var(--spacing)*4)_1fr] grid-cols-[0_1fr] has-[>svg]:gap-x-3 gap-y-0.5 items-start [&>svg]:size-4 [&>svg]:translate-y-0.5 [&>svg]:text-current before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-b before:from-white/30 before:to-transparent before:opacity-50 before:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:bg-[radial-gradient(circle_at_50%_120%,rgba(255,255,255,0.1),transparent_70%)] after:opacity-70 after:pointer-events-none shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] transition-all duration-300 [&::before]:h-[30%] [&::before]:bg-gradient-to-b [&::before]:from-white/40 [&::before]:to-transparent [&::before]:rounded-t-lg\",\n  {\n    variants: {\n      variant: {\n        default:\n          \"bg-card/20 backdrop-blur-[1px] text-card-foreground border border-foreground/20 [background-image:linear-gradient(to_bottom_right,rgba(255,255,255,0.1),transparent_50%)] [background-size:200%_200%] hover:[background-position:100%_100%]\",\n        destructive:\n          \"text-destructive bg-card [&>svg]:text-current *:data-[slot=alert-description]:text-destructive/90 [background-image:linear-gradient(to_bottom_right,rgba(255,255,255,0.1),transparent_50%)] [background-size:200%_200%] hover:[background-position:100%_100%]\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n    },\n  }\n);\n\nfunction Alert({\n  className,\n  variant,\n  ...props\n}: React.ComponentProps<\"div\"> & VariantProps<typeof alertVariants>) {\n  return (\n    <div\n      data-slot=\"alert\"\n      role=\"alert\"\n      className={cn(alertVariants({ variant }), className)}\n      {...props}\n    />\n  );\n}\n\nfunction AlertTitle({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      data-slot=\"alert-title\"\n      className={cn(\n        \"col-start-2 line-clamp-1 min-h-4 font-medium tracking-tight\",\n        className\n      )}\n      {...props}\n    />\n  );\n}\n\nfunction AlertDescription({\n  className,\n  ...props\n}: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      data-slot=\"alert-description\"\n      className={cn(\n        \"text-muted-foreground col-start-2 grid justify-items-start gap-1 text-sm [&_p]:leading-relaxed\",\n        className\n      )}\n      {...props}\n    />\n  );\n}\n\nexport { Alert, AlertTitle, AlertDescription };\n",
+      "type": "registry:component",
+      "target": "components/ui/glass/alert.tsx"
+    }
+  ]
+}

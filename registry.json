@@ -16,6 +16,20 @@
           "target": "components/ui/glass/button.tsx"
         }
       ]
+    },
+    {
+      "name": "glass-alert",
+      "type": "registry:component",
+      "title": "Glass Alert",
+      "description": "A simple glass alert component",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/glass/alert.tsx",
+          "type": "registry:component",
+          "target": "components/ui/glass/alert.tsx"
+        }
+      ]
     }
   ]
 }
