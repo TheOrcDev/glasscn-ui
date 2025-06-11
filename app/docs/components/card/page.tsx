@@ -101,11 +101,11 @@ export default function CardPage() {
             </CardHeader>
             <CardContent className="flex flex-col gap-4">
               <Label>Name</Label>
-              <Input placeholder="Project name" className="max-w-72" />
+              <Input placeholder="Project name" className="w-full" />
 
               <Label>Framework</Label>
               <Select>
-                <SelectTrigger>
+                <SelectTrigger className="w-full">
                   <SelectValue placeholder="Framework" />
                 </SelectTrigger>
                 <SelectContent>
