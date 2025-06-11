@@ -7,6 +7,10 @@ const components = [
     title: "Button",
     url: "/docs/components/button",
   },
+  {
+    title: "Card",
+    url: "/docs/components/card",
+  },
 ];
 
 export const navItems = {

@@ -30,6 +30,20 @@
           "target": "components/ui/glass/alert.tsx"
         }
       ]
+    },
+    {
+      "name": "glass-card",
+      "type": "registry:component",
+      "title": "Glass Card",
+      "description": "A simple glass card component",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/glass/card.tsx",
+          "type": "registry:component",
+          "target": "components/ui/glass/card.tsx"
+        }
+      ]
     }
   ]
 }
