@@ -33,7 +33,7 @@ export default function ButtonPage() {
       <div className="relative flex flex-col gap-4 border rounded-lg p-4 min-h-[450px]">
         <div
           className={cn(
-            "pointer-events-none absolute inset-0 [background-size:40px_40px] select-none -z-10",
+            "pointer-events-none absolute inset-0 [background-size:20px_20px] select-none -z-10",
             "[background-image:linear-gradient(to_right,#e5e5e5_1px,transparent_1px),linear-gradient(to_bottom,#e5e5e5_1px,transparent_1px)] dark:[background-image:linear-gradient(to_right,#171717_1px,transparent_1px),linear-gradient(to_bottom,#171717_1px,transparent_1px)]"
           )}
         />

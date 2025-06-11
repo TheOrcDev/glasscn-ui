@@ -8,7 +8,7 @@
       "type": "registry:component",
       "title": "Glass Button",
       "description": "A simple glass button component",
-      "registryDependencies": ["button"],
+      "registryDependencies": [],
       "files": [
         {
           "path": "components/ui/glass/button.tsx",
