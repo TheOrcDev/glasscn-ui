@@ -99,7 +99,7 @@ export default function CardPage() {
         </div>
 
         <p className="hidden md:block text-sm text-muted-foreground">
-          Scroll down to see the alert on different backgrounds.
+          Scroll down to see the card on different backgrounds.
         </p>
       </div>
 
@@ -108,7 +108,7 @@ export default function CardPage() {
       <Separator />
 
       <InstallationCommands
-        packageUrl={`${process.env.NEXT_PUBLIC_BASE_URL}/r/glass-alert.json`}
+        packageUrl={`${process.env.NEXT_PUBLIC_BASE_URL}/r/glass-card.json`}
       />
 
       <h3 className="text-lg font-bold mt-10">Usage</h3>
