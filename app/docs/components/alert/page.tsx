@@ -63,7 +63,7 @@ export default function AlertPage() {
         </div>
 
         <p className="hidden md:block text-sm text-muted-foreground">
-          Scroll down to see the alert on different backgrounds.{" "}
+          Scroll down to see the alert on different backgrounds.
         </p>
       </div>
 

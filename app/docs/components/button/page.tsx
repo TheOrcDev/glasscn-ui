@@ -56,6 +56,10 @@ export default function ButtonPage() {
             Button
           </Button>
         </div>
+
+        <p className="hidden md:block text-sm text-muted-foreground">
+          Scroll down to see the button on different backgrounds.
+        </p>
       </div>
 
       <h3 className="text-lg font-bold">Installation</h3>
